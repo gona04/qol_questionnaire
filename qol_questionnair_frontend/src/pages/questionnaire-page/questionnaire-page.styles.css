@@ -1,0 +1,24 @@
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.loading-message {
+  background-color: rgba(230, 247, 255, 0.8); /* Light blue, semi-transparent */
+  color: #0056b3; /* Darker blue text */
+  border: 1px solid rgba(153, 204, 255, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.error-message {
+  background-color: rgba(255, 230, 230, 0.8); /* Light red, semi-transparent */
+  color: #cc0000; /* Darker red text */
+  border: 1px solid rgba(255, 153, 153, 0.6);
+  backdrop-filter: blur(8px);
+}

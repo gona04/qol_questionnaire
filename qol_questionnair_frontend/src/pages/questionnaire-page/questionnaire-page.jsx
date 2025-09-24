@@ -10,15 +10,19 @@ const QuestionnairePage = () => {
   const [gptAnalysis, setGptAnalysis] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [url, setUrl] = useState(null)
+  // localURL = `http://localhost:8080/analyze`;
+  // publish_URL = `https://qol-questionnaire.onrender.com/`;
 
   useEffect(() => {
+    setUrl(`https://qol-questionnaire.onrender.com/`);
     if (showResults && !loading && !error && gptAnalysis === '') {
       const sendAnswersToBackend = async () => {
         setLoading(true);
         setError(null);
         setGptAnalysis(''); // Clear previous analysis when starting a new one
         try {
-          const response = await fetch('http://localhost:8080/analyze', {
+          const response = await fetch(url+'analyze', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

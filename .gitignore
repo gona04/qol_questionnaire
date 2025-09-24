@@ -4,7 +4,6 @@ node_modules
 
 # Vite
 .vite
-dist
 
 # macOS
 .DS_Store
